@@ -1,0 +1,36 @@
+$margin-auto: 0 auto;
+
+// Название шрифтов
+
+$oswald-font: "Oswald";
+$perfectDOS: "PerfectDOSVGA437";
+
+//
+
+// Дефолтный размер и высота линии
+
+$default-font-size: 16px;
+$default-line-height: 22px;
+
+//
+
+// Цвета
+
+$white-color: #ffffff;
+$black-color: #000000;
+
+//
+
+// Дефолтная продолжительность transition
+
+$transition-duration: .5s;
+
+//
+
+// Дефолтная продолжительность анимации с x2 скоростью
+
+$default-animation-duration: .8s;
+$animation-duration-x2: calc(#{$default-animation-duration} / 2);
+
+//
+

@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald-ExtraLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DotGothic";
+  src: url("../fonts/DotGothic-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font: {
+    family: $oswald-font, sans-serif;
+    weight: 400;
+    size: $default-font-size;
+  }
+  line-height: $default-line-height;
+  color: $black-color;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+input {
+  border: none;
+  font: {
+    family: inherit;
+    size: inherit;
+  }
+}
+
+button {
+  padding: 0;
+  font: {
+    family: inherit;
+    size: inherit;
+  }
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
