@@ -1,9 +1,13 @@
 import React from 'react';
 
+import UserCity from './user-city/user-city';
+import LoginAndBasket from './login-and-basket/login-and-basket';
+
 export default function Header() {
   return (
-    <header className="header">
-      <p>Hello</p>
+    <header className="container header">
+      <UserCity />
+      <LoginAndBasket />
     </header>
   );
 }

@@ -1,0 +1,27 @@
+.site-search {
+
+  &__input-search {
+    padding: 5px 25px 5px 10px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: $black-color;
+    background: url('../img/loupe.svg') no-repeat 99% center;
+    background-size: 20px;
+    background-color: $white-color;
+    border: 1px solid $dark-chocolate;
+    border-bottom: none;
+    border-top-right-radius: 15%;
+    border-top-left-radius: 15%;
+    transition: color, $transition-duration;
+
+    &::placeholder {
+      color: $dark-chocolate;
+      transition: all, $transition-duration;
+    }
+
+    &:hover::placeholder,
+    &:focus::placeholder {
+      transform: translateX(-1000px);
+    }
+  }
+}

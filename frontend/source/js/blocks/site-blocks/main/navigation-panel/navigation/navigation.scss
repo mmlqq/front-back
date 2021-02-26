@@ -1,0 +1,24 @@
+.navigation {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin: 0 20px;
+    padding: 10px 20px;
+    background-color: $wine;
+    box-shadow: 6px -5.5px 3px 5px $dark-chocolate;
+  }
+
+
+  &__link {
+    color: $white-color;
+    transition: opacity, $transition-duration;
+
+    &:hover,
+    &:focus {
+      opacity: .5;
+    }
+  }
+}

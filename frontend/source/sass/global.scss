@@ -38,7 +38,8 @@ body {
     size: $default-font-size;
   }
   line-height: $default-line-height;
-  color: $black-color;
+  color: $dark-chocolate;
+  background-image: linear-gradient(45deg, $dust-rose, $clay);
 }
 
 #root {
@@ -58,6 +59,7 @@ ul {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -82,6 +84,8 @@ input {
     family: inherit;
     size: inherit;
   }
+  color: inherit;
+  background-color: inherit;
 }
 
 button {
