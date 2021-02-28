@@ -1,0 +1,44 @@
+.reviews {
+  margin-bottom: 30px;
+
+  &__headline {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $black-color;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: green;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__user-photo-container {
+    margin-bottom: 20px;
+  }
+
+  &__user-name {
+    margin-bottom: 10px;
+  }
+
+  &__user-review-text {
+    text-align: center;
+  }
+}

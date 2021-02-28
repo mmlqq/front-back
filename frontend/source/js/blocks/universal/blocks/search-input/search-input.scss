@@ -1,0 +1,29 @@
+.search-input {
+  display: flex;
+  justify-content: center;
+
+  &__form {
+    width: 60%;
+  }
+
+  &__input {
+    padding: 10px 55px 10px 20px;
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: $white-color;
+    border: 1px solid $black-color;
+    background: url('../img/loupe.svg') no-repeat 98% center;
+    background-color: pink;
+    background-size: 30px;
+
+    &::placeholder {
+      color: $white-color;
+      transition: all, $transition-duration;
+    }
+
+    &:hover::placeholder {
+      transform: translateX(-1000px);
+    }
+  }
+}

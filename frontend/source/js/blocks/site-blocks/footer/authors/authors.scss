@@ -1,0 +1,57 @@
+.authors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__info {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:last-of-type) {
+      margin-right: 15px;
+    }
+
+    &:first-of-type {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: -1px;
+        right: -8px;
+        width: 2px;
+        height: 100%;
+        background-color: $black-color;
+      }
+    }
+  }
+
+  &__side {
+    margin-right: 15px;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+  }
+
+  &__link {
+
+    & svg {
+      width: 35px;
+      height: 35px;
+    }
+
+    &:hover svg {
+      fill: yellow;
+    }
+  }
+}

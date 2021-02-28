@@ -1,13 +1,17 @@
 import React from 'react';
 
-import UserCity from './user-city/user-city';
-import LoginAndBasket from './login-and-basket/login-and-basket';
+import TopBar from './top-bar/top-bar';
+import Slider from './slider/slider';
+import NavigationCategories from './navigation-categories/navigation-categories';
+import SearchInput from '../../universal/blocks/search-input/search-input';
 
 export default function Header() {
   return (
     <header className="container header">
-      <UserCity />
-      <LoginAndBasket />
+      <TopBar />
+      <Slider />
+      <NavigationCategories />
+      <SearchInput />
     </header>
   );
 }
