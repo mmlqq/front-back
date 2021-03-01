@@ -10,7 +10,7 @@ export default function Navigation() {
       <ul className="navigation__list">
         {data.map((item) => (
           <li key={item.type} className="navigation__item">
-            <Link to={item.href} className="navigation__link">{item.type}</Link>
+            <Link to={item.href} className="link navigation__link">{item.type}</Link>
           </li>
         ))}
       </ul>

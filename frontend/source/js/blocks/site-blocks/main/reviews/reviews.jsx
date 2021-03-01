@@ -7,7 +7,9 @@ import '../../../../../img/review-user-placeholder.png';
 export default function Reviews() {
   return (
     <section className="reviews">
-      <h2 className="reviews__headline">Отзывы</h2>
+      <div className="reviews__headline-container">
+        <h2 className="headline reviews__headline">Отзывы</h2>
+      </div>
       <ul className="reviews__list">
         {mock.map((review) => (
           <li className="reviews__item">

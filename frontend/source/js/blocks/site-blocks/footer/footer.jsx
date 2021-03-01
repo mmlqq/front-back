@@ -4,7 +4,7 @@ import Authors from './authors/authors';
 
 export default function Footer() {
   return (
-    <footer className="container footer">
+    <footer className="footer">
       <Authors />
     </footer>
   );

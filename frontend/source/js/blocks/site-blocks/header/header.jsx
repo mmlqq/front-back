@@ -7,7 +7,7 @@ import SearchInput from '../../universal/blocks/search-input/search-input';
 
 export default function Header() {
   return (
-    <header className="container header">
+    <header className="header">
       <TopBar />
       <Slider />
       <NavigationCategories />

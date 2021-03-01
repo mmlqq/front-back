@@ -1,4 +1,5 @@
 .search-input {
+  padding: 0 $default-padding;
   display: flex;
   justify-content: center;
 
@@ -11,14 +12,14 @@
     width: 100%;
     font-size: 1.5rem;
     line-height: 1.5rem;
-    color: $white-color;
+    color: $black-color;
     border: 1px solid $black-color;
     background: url('../img/loupe.svg') no-repeat 98% center;
-    background-color: pink;
+    background-color: $white-color;
     background-size: 30px;
 
     &::placeholder {
-      color: $white-color;
+      color: $black-color;
       transition: all, $transition-duration;
     }
 

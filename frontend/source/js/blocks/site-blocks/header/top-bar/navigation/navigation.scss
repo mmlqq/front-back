@@ -8,17 +8,4 @@
   &__item {
     margin: 5px 15px;
   }
-
-  &__link {
-    border-bottom: 1px solid transparent;
-    transition: border-bottom-color, opacity, $transition-duration;
-
-    &:hover {
-      border-bottom-color: $black-color;
-    }
-
-    &:active {
-      opacity: .5;
-    }
-  }
 }

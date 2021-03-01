@@ -19,7 +19,7 @@ export default function Collections() {
         <img src={collection.imgSrc} alt="Картинка товара" />
         <figcaption className="collections__product-price">{`${collection.price} руб`}</figcaption>
       </figure>
-      <a href="test" className="collections__product-link">{collection.name}</a>
+      <a href="test" className="link collections__product-link">{collection.name}</a>
     </li>
   )), [activeCollection]);
 
@@ -49,7 +49,7 @@ export default function Collections() {
         <ul className="collections__buttons-list" onClick={changeCollections}>
           {buttonsType.map((button) => (
             <li key={button} className="collections__button-item">
-              <button className={classNames('collections__type-button', button === activeCollection.type && ' collections__type-button--active')}>{button}</button>
+              <button className={classNames('collections__type-button', button === activeCollection.type && 'headline')} type="button">{button}</button>
             </li>
           ))}
         </ul>

@@ -4,7 +4,7 @@ import Reviews from './reviews/reviews';
 
 export default function Main() {
   return (
-    <main className="container main">
+    <main className="main">
       <Collections />
       <Reviews />
     </main>

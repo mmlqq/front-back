@@ -48,10 +48,16 @@
     & svg {
       width: 35px;
       height: 35px;
+      transition: fill $transition-duration;
     }
 
-    &:hover svg {
-      fill: yellow;
+    &:hover svg,
+    &:focus svg {
+      fill: $red-color;
+    }
+
+    &:active svg {
+      fill: $darkgreen-color;
     }
   }
 }

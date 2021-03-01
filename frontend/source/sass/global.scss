@@ -38,14 +38,16 @@ body {
     size: $default-font-size;
   }
   line-height: $default-line-height;
-  color: $dark-chocolate;
-  background-color: $white-color;
+  color: $black-color;
+  background-color: $main-background-color;
 }
 
 #root {
+  padding: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: $white-color;
 }
 
 * {

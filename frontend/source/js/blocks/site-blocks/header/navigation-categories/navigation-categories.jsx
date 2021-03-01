@@ -9,7 +9,7 @@ export default function NavigationCategories() {
       <ul className="navigation-categories__list">
         {data.map((category) => (
           <li key={category.type} className="navigation-categories__item">
-            <Link to={category.href} className="navigation-categories__link">{category.type.toUpperCase()}</Link>
+            <Link to={category.href} className="link navigation-categories__link">{category.type.toUpperCase()}</Link>
           </li>
         ))}
       </ul>
