@@ -17,7 +17,7 @@
     height: 100%;
   }
 
-  &--left svg {
+  &[data-side="left"] svg {
     transform: rotate(180deg);
   }
 }

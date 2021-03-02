@@ -10,9 +10,9 @@ export default function Reviews() {
       <div className="reviews__headline-container">
         <h2 className="headline reviews__headline">Отзывы</h2>
       </div>
-      <ul className="reviews__list">
+      <ul className="row row-cols-1 row-cols-md-3 g-0 reviews__list">
         {mock.map((review) => (
-          <li className="reviews__item">
+          <li key={review.id} className="reviews__item">
             <figure className="reviews__user-photo-container">
               <img src={review.imgSrc} alt="Фото покупателя" />
             </figure>

@@ -1,16 +1,17 @@
 .authors {
-  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
   &__info {
+    margin-bottom: 20px;
     font-size: 1.4rem;
     line-height: 1.4rem;
+    text-align: center;
   }
 
   &__list {
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__item {
@@ -58,6 +59,26 @@
 
     &:active svg {
       fill: $darkgreen-color;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .authors {
+    flex-direction: row;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .authors {
+
+    &__list {
+      justify-content: space-between;
+    }
+
+    &__info {
+      margin-bottom: 0;
+      text-align: justify;
     }
   }
 }

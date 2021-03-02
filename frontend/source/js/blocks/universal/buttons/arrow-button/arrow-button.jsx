@@ -4,9 +4,9 @@ import classNames from 'classnames';
 
 import Arrow from '../../../svg/arrow-icon/arrow-icon';
 
-export default function ArrowButton({ side }) {
+export default function ArrowButton({ majorClass, side }) {
   return (
-    <button className={classNames('arrow-button', `arrow-button--${side}`)} aria-label={side === 'left' ? 'Предыдущий слайд' : 'Следующий слайд'} type="button">
+    <button className={classNames('arrow-button', majorClass && `${majorClass}`)} aria-label={side === 'left' ? 'Предыдущий слайд' : 'Следующий слайд'} data-side={side} type="button">
       <Arrow />
     </button>
   );
@@ -14,4 +14,9 @@ export default function ArrowButton({ side }) {
 
 ArrowButton.propTypes = {
   side: PropTypes.string.isRequired,
+  majorClass: PropTypes.string,
+};
+
+ArrowButton.defaultProps = {
+  majorClass: null,
 };

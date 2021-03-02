@@ -54,7 +54,7 @@ export default function Collections() {
           ))}
         </ul>
       </div>
-      <ul className="collections__products-list">
+      <ul className="row row-cols-1 row-cols-md-2 row-cols-xxl-4 g-0 collections__products-list">
         {listMarkup}
       </ul>
     </section>
