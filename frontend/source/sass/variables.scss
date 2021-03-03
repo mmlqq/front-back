@@ -1,5 +1,9 @@
 $margin-auto: 0 auto;
 
+// Дефолтный отступ по оси x
+
+$default-padding: 10px;
+
 // Название шрифтов
 
 $oswald-font: "Oswald";
@@ -16,8 +20,17 @@ $default-line-height: 22px;
 
 // Цвета
 
+$transparent: transparent;
+
 $white-color: #ffffff;
 $black-color: #000000;
+
+$gray-color: #d1d0d0;
+
+$red-color: #ff0000;
+$darkgreen-color: #006400;
+
+$main-background-color: #f3f3f3;
 
 //
 

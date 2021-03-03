@@ -1,3 +1,12 @@
+@import "~bootstrap/scss/bootstrap";
 @import "./variables.scss";
 
+@import "./connect-files/common-connect.scss";
+
 @import "./global.scss";
+
+@import "./connect-files/universal-connect.scss";
+
+@import "./connect-files/header-connect.scss";
+@import "./connect-files/main-connect.scss";
+@import "./connect-files/footer-connect.scss";
