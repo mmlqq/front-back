@@ -8,11 +8,9 @@ import java.util.Collections;
 import java.util.List;
 
 public class ProductRepository {
-    private static final List<Product> products = new ArrayList<Product>();
-    static {
-        products.add(new Product(1,"2","3",4,Category.ENERGY_DRINK));
-        products.add(new Product(2,"2","3",4,Category.ENERGY_BARS));
-    }
+
+    private static final List<Product> products = new ArrayList<>();
+
     public void add(Product product) {
         products.add(product);
     }
@@ -29,12 +27,26 @@ public class ProductRepository {
         return products.size();
     }
 
-    public Product getById(int id) {
-        return products.get(id);
+    public List<Product> getByCategory(Category category){
+        List<Product> categories = new ArrayList<>();
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getCategory().equals(category)){
+                categories.add(products.get(i));
+            }
+        }return categories;
     }
+
+    public Product getById(int id) {
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getId() == id) {
+                return products.get(i);
+            }
+        }
+        return null;
+    }
+
 
     public List getList() {
         return products;
     }
-
 }
