@@ -1,6 +1,7 @@
 .basket {
   display: flex;
   align-items: center;
+  @include linkInteractiveStyle;
 
   & svg {
     margin-right: 5px;

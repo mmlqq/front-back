@@ -18,6 +18,10 @@
     display: flex;
   }
 
+  &__link {
+    @include linkInteractiveStyle;
+  }
+
   &__item {
     margin-bottom: 15px;
 

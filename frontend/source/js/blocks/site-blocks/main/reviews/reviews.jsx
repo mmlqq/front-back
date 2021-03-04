@@ -8,7 +8,7 @@ export default function Reviews() {
   return (
     <section className="reviews">
       <div className="reviews__headline-container">
-        <h2 className="headline reviews__headline">Отзывы</h2>
+        <h2 className="reviews__headline">Отзывы</h2>
       </div>
       <ul className="row row-cols-1 row-cols-md-3 g-0 reviews__list">
         {mock.map((review) => (

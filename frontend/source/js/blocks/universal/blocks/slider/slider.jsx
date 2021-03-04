@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import $ from 'jquery';
 
-import ArrowButton from '../../../universal/buttons/arrow-button/arrow-button';
+import ArrowButton from '../../buttons/arrow-button/arrow-button';
 
 import mock from './mock/mock';
 
@@ -60,7 +60,7 @@ export default function Slider() {
         <figure className="slider__logo-container">
           <img src="assets/img/logo-placeholder.png" alt="Логотип магазина" />
         </figure>
-        <ArrowButton majorClass="slider__shift-button" side="left" />
+        <ArrowButton majorClass="slider__shift-button" side="left" conditionForDisable={sliderCount === 1} />
         <ul className="row row-cols-1 g-0 slider__list">
           {mock.map((item) => (
             <li key={item.id} className="col slider__item">
@@ -71,7 +71,7 @@ export default function Slider() {
             </li>
           ))}
         </ul>
-        <ArrowButton majorClass="slider__shift-button" side="right" />
+        <ArrowButton majorClass="slider__shift-button" side="right" conditionForDisable={sliderCount === mock.length} />
       </div>
     </section>
   );

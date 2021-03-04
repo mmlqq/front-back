@@ -5,6 +5,8 @@ import React, { useState, useMemo } from 'react';
 
 import classNames from 'classnames';
 
+import ProductList from '../../../universal/blocks/product-list/product-list';
+
 import buttonsType from './data/buttons-type';
 import mock from './data/mock';
 
@@ -13,15 +15,17 @@ import '../../../../../img/product-placeholder.png';
 export default function Collections() {
   const [activeCollection, setActiveCollection] = useState(mock[0]);
 
-  const listMarkup = useMemo(() => activeCollection.products.map((collection, index) => (
-    <li key={index} className="collections__product-item">
-      <figure className="collections__product-img-container">
-        <img src={collection.imgSrc} alt="Картинка товара" />
-        <figcaption className="collections__product-price">{`${collection.price} руб`}</figcaption>
-      </figure>
-      <a href="test" className="link collections__product-link">{collection.name}</a>
-    </li>
-  )), [activeCollection]);
+  // Мемоизирую компонент
+
+  const productList = useMemo(() => (
+    <ProductList
+      majorClass="collections__product-list"
+      bootstrapClass="row row-cols-1 row-cols-md-2 row-cols-xxl-4 g-0"
+      list={activeCollection.products}
+    />
+  ), [activeCollection]);
+
+  //
 
   // Получаю нужный массив на основе выбранного collectionType
 
@@ -49,14 +53,12 @@ export default function Collections() {
         <ul className="collections__buttons-list" onClick={changeCollections}>
           {buttonsType.map((button) => (
             <li key={button} className="collections__button-item">
-              <button className={classNames('collections__type-button', button === activeCollection.type && 'headline')} type="button">{button}</button>
+              <button className={classNames('collections__type-button', button === activeCollection.type && 'collections__type-button--active')} type="button">{button}</button>
             </li>
           ))}
         </ul>
       </div>
-      <ul className="row row-cols-1 row-cols-md-2 row-cols-xxl-4 g-0 collections__products-list">
-        {listMarkup}
-      </ul>
+      {productList}
     </section>
   );
 }

@@ -4,12 +4,12 @@
   &__headline-container {
     margin-bottom: 20px;
     display: flex;
-    border-bottom: 1px solid $black-color;
+    @include underline;
   }
 
   &__headline {
-    padding-bottom: 10px;
-    font-weight: 400;
+    @include headlineFontNormal;
+    @include headlineUnderline;
   }
 
   &__item {
