@@ -24,7 +24,6 @@
     font-size: 1.3rem;
     line-height: 1.3rem;
     transition: opacity $transition-duration;
-    outline: none;
 
     &--active {
       @include headlineUnderline;
@@ -32,7 +31,6 @@
 
     &:hover,
     &:focus {
-      border-bottom: 2px solid $black-color;
       opacity: .6;
     }
 

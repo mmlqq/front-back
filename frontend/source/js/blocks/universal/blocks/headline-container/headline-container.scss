@@ -1,0 +1,10 @@
+.headline-container {
+  margin-bottom: 30px;
+  display: flex;
+  @include underline;
+
+  &__headline {
+    @include headlineUnderline;
+    @include headlineFontNormal;
+  }
+}

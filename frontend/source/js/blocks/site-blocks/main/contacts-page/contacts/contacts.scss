@@ -1,0 +1,32 @@
+.contacts {
+
+  &__list {
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    transition: opacity $transition-duration;
+    &:hover {
+      opacity: .6;
+    }
+
+    &:active {
+      opacity: .3;
+    }
+  }
+
+  &__item span,
+  &__item &__link {
+    margin-left: 15px;
+    @include highlight-text-color;
+
+  }
+
+  & iframe {
+    width: 100%;
+  }
+}

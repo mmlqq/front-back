@@ -4,9 +4,7 @@ $checkbox-size: 13px;
   margin-bottom: 60px;
 
   &__headline {
-    margin-bottom: 15px;
-    @include headlineUnderline;
-    @include headlineFontNormal;
+    border-bottom: none;
   }
 
   &__filter-section {
@@ -109,7 +107,8 @@ $checkbox-size: 13px;
     border: 2px solid $black-color;
     transition: box-shadow $transition-duration;
 
-    &:hover {
+    &:hover,
+    &:focus {
       box-shadow: 0 0 8px 0 rgba(0, 0, 0, .6) inset;
     }
 
