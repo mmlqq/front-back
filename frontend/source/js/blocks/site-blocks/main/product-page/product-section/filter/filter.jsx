@@ -2,12 +2,13 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 
-import SPACE from '../../../../variables/variables';
+import SPACE from '../../../../../variables/variables';
 
 import mock from './mock/mock';
 
-import '../../../../../../img/svg/plus.svg';
-import '../../../../../../img/svg/minus.svg';
+import '../../../../../../../img/svg/plus.svg';
+import '../../../../../../../img/svg/minus.svg';
+import HeadlineContainer from '../../../../../universal/blocks/headline-container/headline-container';
 
 export default function Filter() {
   // Переключение класса у legend тега
@@ -32,7 +33,7 @@ export default function Filter() {
 
   return (
     <section className="col-12 col-lg-2 filter">
-      <h2 className="filter__headline">Фильтры</h2>
+      <HeadlineContainer majorClass="filter" headlineText="Фильтры" />
       <form method="GET" className="filter__form">
         {mock.map((section) => (
           <fieldset key={section.name} className="filter__filter-section" onClick={toggleFilterMenu} onKeyUp={toggleFilterMenuByKeyPress}>

@@ -23,7 +23,8 @@
       transition: all, $transition-duration;
     }
 
-    &:hover::placeholder {
+    &:hover::placeholder,
+    &:focus::placeholder {
       transform: translateX(-1000px);
     }
   }

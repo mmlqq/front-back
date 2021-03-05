@@ -5,12 +5,12 @@ import React, { useState, useMemo } from 'react';
 
 import classNames from 'classnames';
 
-import ProductList from '../../../universal/blocks/product-list/product-list';
+import ProductList from '../../../../universal/blocks/product-list/product-list';
 
 import buttonsType from './data/buttons-type';
 import mock from './data/mock';
 
-import '../../../../../img/product-placeholder.png';
+import '../../../../../../img/product-placeholder.png';
 
 export default function Collections() {
   const [activeCollection, setActiveCollection] = useState(mock[0]);

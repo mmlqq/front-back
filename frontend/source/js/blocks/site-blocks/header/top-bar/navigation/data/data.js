@@ -5,11 +5,11 @@ const data = [
   },
   {
     type: 'Доставка и оплата',
-    href: '/shipping-and-payment',
+    href: '/delivery-and-payment',
   },
   {
     type: 'О компании',
-    href: '/about-us',
+    href: '/about-company',
   },
   {
     type: 'Контакты',

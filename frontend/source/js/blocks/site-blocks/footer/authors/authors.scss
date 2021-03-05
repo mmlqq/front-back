@@ -45,20 +45,20 @@
   }
 
   &__link {
+    transition: opacity $transition-duration;
 
     & svg {
       width: 35px;
       height: 35px;
-      transition: fill $transition-duration;
     }
 
-    &:hover svg,
-    &:focus svg {
-      fill: $red-color;
+    &:hover,
+    &:focus {
+      opacity: .6;
     }
 
-    &:active svg {
-      fill: $darkgreen-color;
+    &:active {
+      opacity: .3;
     }
   }
 }

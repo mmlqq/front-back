@@ -1,17 +1,6 @@
 .reviews {
   margin-bottom: 30px;
 
-  &__headline-container {
-    margin-bottom: 20px;
-    display: flex;
-    @include underline;
-  }
-
-  &__headline {
-    @include headlineFontNormal;
-    @include headlineUnderline;
-  }
-
   &__item {
     margin-bottom: 20px;
     padding: 0 25px;

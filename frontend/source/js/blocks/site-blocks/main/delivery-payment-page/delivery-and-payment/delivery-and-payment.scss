@@ -1,0 +1,25 @@
+.delivery-and-payment {
+
+  &__headline-container {
+    margin-bottom: 25px;
+    display: flex;
+    @include underline;
+  }
+
+  &__headline {
+    @include headlineUnderline;
+    @include headlineFontNormal;
+  }
+
+  &__info-container {
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+  }
+
+  &__important-info {
+    @include highlight-text-color;
+  }
+}
