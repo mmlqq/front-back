@@ -1,7 +1,7 @@
 const data = [
   {
-    type: 'Каталог',
-    href: '/catalog',
+    type: 'Главная',
+    href: '/',
   },
   {
     type: 'Доставка и оплата',

@@ -1,4 +1,4 @@
-.link {
+@mixin linkInteractiveStyle {
   border-bottom: 1px solid $transparent;
   transition: border-bottom-color, opacity, $transition-duration;
 

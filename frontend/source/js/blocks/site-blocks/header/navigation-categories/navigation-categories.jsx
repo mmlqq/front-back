@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import data from './data/data';
 
@@ -9,7 +9,7 @@ export default function NavigationCategories() {
       <ul className="row row-cols-1 row-cols-md-auto g-0 navigation-categories__list">
         {data.map((category) => (
           <li key={category.type} className="navigation-categories__item">
-            <Link to={category.href} className="link navigation-categories__link">{category.type.toUpperCase()}</Link>
+            <NavLink to={category.href} className="navigation-categories__link" activeClassName="current-link">{category.type.toUpperCase()}</NavLink>
           </li>
         ))}
       </ul>

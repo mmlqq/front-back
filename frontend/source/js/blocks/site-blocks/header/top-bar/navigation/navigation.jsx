@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import classNames from 'classnames';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import data from './data/data';
 
@@ -13,7 +13,7 @@ export default function Navigation({ openStatus, navigationRef }) {
       <ul className="row row-cols-sm-1 row-cols-md-auto g-0 navigation__list">
         {data.map((item) => (
           <li key={item.type} className="navigation__item">
-            <Link to={item.href} className="link navigation__link">{item.type}</Link>
+            <NavLink exact to={item.href} className="navigation__link" activeClassName="current-link">{item.type}</NavLink>
           </li>
         ))}
       </ul>

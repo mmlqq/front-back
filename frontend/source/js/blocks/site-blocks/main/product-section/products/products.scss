@@ -1,0 +1,15 @@
+.products {
+  margin: $margin-auto;
+
+  &__headline-container {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include headlineUnderline;
+  }
+
+  &__headline {
+    @include headlineFontNormal;
+  }
+}
