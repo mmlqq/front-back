@@ -5,7 +5,7 @@ const data = [
   },
   {
     type: 'Лыжи',
-    href: '/catalog/skiings',
+    href: '/catalog/skiing',
   },
   {
     type: 'Одежда',

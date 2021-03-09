@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Slider from '../../universal/blocks/slider/slider';
 
@@ -13,10 +13,13 @@ import DeliveryAndPayment from './delivery-payment-page/delivery-and-payment/del
 import Contacts from './contacts-page/contacts/contacts';
 import AboutCompany from './company-page/about-company/about-company';
 
+import PathNotExist from '../../universal/blocks/path-not-exist/path-not-exist';
+
 export default function Main() {
   return (
     <main className="container main">
       <Switch>
+        <Redirect exact from="/catalog" to="/" />
         <Route path="/catalog/:catalogType">
           <ProductSection />
         </Route>
@@ -33,6 +36,9 @@ export default function Main() {
           <Slider />
           <Collections />
           <Reviews />
+        </Route>
+        <Route>
+          <PathNotExist />
         </Route>
       </Switch>
     </main>
