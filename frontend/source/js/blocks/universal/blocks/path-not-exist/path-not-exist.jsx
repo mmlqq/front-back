@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import { Section, WarningText, LinkTo } from './components';
 
 export default function PathNotExist() {
   return (
-    <section className="path-not-exist">
+    <Section>
       <h2 className="visually-hidden">Пути не существует</h2>
-      <p className="path-not-exist__warning">Такого пути нет!</p>
-      <Link to="/#" className="path-not-exist__to-main-page" autofocus>На главную страницу</Link>
-    </section>
+      <WarningText>Такого пути нет!</WarningText>
+      <LinkTo to="/">На главную страницу</LinkTo>
+    </Section>
   );
 }

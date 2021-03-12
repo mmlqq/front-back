@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import $ from 'jquery';
 
+import Section from './components';
+
 import HamburgerButton from '../../../universal/buttons/hamburger-button/hamburger-button';
 import Navigation from './navigation/navigation';
 import Basket from './basket/basket';
@@ -43,11 +45,11 @@ export default function TopBar() {
   //
 
   return (
-    <section className="row g-0 top-bar">
+    <Section className="row g-0">
       <h2 className="visually-hidden">Навигационная панель</h2>
       <HamburgerButton handler={hamburgerHandler} />
       <Navigation openStatus={isOpen} navigationRef={navigationRef} />
       <Basket />
-    </section>
+    </Section>
   );
 }

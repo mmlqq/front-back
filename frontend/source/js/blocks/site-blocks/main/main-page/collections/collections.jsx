@@ -1,9 +1,6 @@
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useMemo } from 'react';
 
-import classNames from 'classnames';
+import { Section, ButtonsContainer, ButtonsList, ButtonItem, CollectionType } from './components';
 
 import ProductList from '../../../../universal/blocks/product-list/product-list';
 
@@ -47,18 +44,18 @@ export default function Collections() {
   //
 
   return (
-    <section className="collections">
+    <Section>
       <h2 className="visually-hidden">Новые и популярные товары</h2>
-      <div className="collections__buttons-container">
-        <ul className="collections__buttons-list" onClick={changeCollections}>
+      <ButtonsContainer>
+        <ButtonsList onClick={changeCollections}>
           {buttonsType.map((button) => (
-            <li key={button} className="collections__button-item">
-              <button className={classNames('collections__type-button', button === activeCollection.type && 'collections__type-button--active')} type="button">{button}</button>
-            </li>
+            <ButtonItem key={button}>
+              <CollectionType type="button" active={button === activeCollection.type}>{button}</CollectionType>
+            </ButtonItem>
           ))}
-        </ul>
-      </div>
+        </ButtonsList>
+      </ButtonsContainer>
       {productList}
-    </section>
+    </Section>
   );
 }

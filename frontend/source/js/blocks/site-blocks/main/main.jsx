@@ -1,6 +1,8 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+import MainComp from './components';
+
 import Slider from '../../universal/blocks/slider/slider';
 
 import Collections from './main-page/collections/collections';
@@ -17,7 +19,7 @@ import PathNotExist from '../../universal/blocks/path-not-exist/path-not-exist';
 
 export default function Main() {
   return (
-    <main className="container main">
+    <MainComp className="container">
       <Switch>
         <Redirect exact from="/catalog" to="/" />
         <Route path="/catalog/:catalogType">
@@ -41,6 +43,6 @@ export default function Main() {
           <PathNotExist />
         </Route>
       </Switch>
-    </main>
+    </MainComp>
   );
 }

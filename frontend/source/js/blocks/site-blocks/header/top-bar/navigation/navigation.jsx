@@ -1,23 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classNames from 'classnames';
-
-import { NavLink } from 'react-router-dom';
+import { Nav, List, Item, LinkTo } from './components';
 
 import data from './data/data';
 
 export default function Navigation({ openStatus, navigationRef }) {
   return (
-    <nav ref={navigationRef} className={classNames('col navigation', openStatus && 'navigation--open')}>
-      <ul className="row row-cols-sm-1 row-cols-md-auto g-0 navigation__list">
+    <Nav ref={navigationRef} className="col" active={openStatus}>
+      <List className="row row-cols-sm-1 row-cols-md-auto g-0">
         {data.map((item) => (
-          <li key={item.type} className="navigation__item">
-            <NavLink exact to={item.href} className="navigation__link" activeClassName="current-page">{item.type}</NavLink>
-          </li>
+          <Item key={item.type}>
+            <LinkTo exact to={item.href} activeClassName="current-page">{item.type}</LinkTo>
+          </Item>
         ))}
-      </ul>
-    </nav>
+      </List>
+    </Nav>
   );
 }
 

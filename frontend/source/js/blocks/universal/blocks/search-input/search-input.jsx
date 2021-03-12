@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Section, Form, Input } from './components';
+
 import '../../../../../img/svg/loupe.svg';
 
 export default function SearchInput() {
@@ -11,11 +13,11 @@ export default function SearchInput() {
   }
 
   return (
-    <section className="search-input">
+    <Section>
       <h2 className="visually-hidden">Поиск по сайту</h2>
-      <form method="GET" className="search-input__form">
-        <input type="text" className="search-input__input" onChange={changeHandler} placeholder="Сноуборд" value={searchText} />
-      </form>
-    </section>
+      <Form method="GET">
+        <Input type="text" onChange={changeHandler} placeholder="Сноуборд" value={searchText} />
+      </Form>
+    </Section>
   );
 }
