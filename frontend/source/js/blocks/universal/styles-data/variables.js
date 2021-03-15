@@ -6,6 +6,20 @@ export const DEFAULT_PADDING = '10px';
 
 //
 
+// Размеры
+
+export const DEFAULT_FONT_SIZE = '16px';
+export const DEFAULT_LINE_HEIGHT = '24px';
+
+//
+
+// Шрифты
+
+export const OSWALD_FONT = 'Oswald';
+export const PERFECT_DOS = 'PerfectDOSVGA437';
+
+//
+
 // Цвета
 
 export const BLACK_COLOR = '#000000';
@@ -38,5 +52,11 @@ export const MEDIA_SIZES = {
   xl: '1200px',
   xxl: '1400px',
 };
+
+//
+
+// Класс текущей страницы (для роутинга)
+
+export const CURRENT_PAGE_CLASS = 'current-page';
 
 //

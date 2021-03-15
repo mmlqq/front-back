@@ -1,6 +1,8 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
+
+import { Section, FilterSection, FilterName, OptionsContainer, OptionItem, Input, InputLabel, SubmitButton } from './components';
+
+import HeadlineContainer from '../../../../../universal/blocks/headline-container/headline-container';
 
 import SPACE from '../../../../../variables/variables';
 
@@ -8,14 +10,13 @@ import mock from './mock/mock';
 
 import '../../../../../../../img/svg/plus.svg';
 import '../../../../../../../img/svg/minus.svg';
-import HeadlineContainer from '../../../../../universal/blocks/headline-container/headline-container';
 
 export default function Filter() {
   // Переключение класса у legend тега
 
   function toggleFilterMenu(e) {
     if (e.target.tagName === 'LEGEND') {
-      e.target.classList.toggle('filter__filter-name--active');
+      e.target.classList.toggle('active');
     }
   }
 
@@ -32,26 +33,26 @@ export default function Filter() {
   //
 
   return (
-    <section className="col-12 col-lg-2 filter">
-      <HeadlineContainer majorClass="filter" headlineText="Фильтры" />
-      <form method="GET" className="filter__form">
+    <Section className="col-12 col-lg-2">
+      <HeadlineContainer headlineText="Фильтры" />
+      <form method="GET">
         {mock.map((section) => (
-          <fieldset key={section.name} className="filter__filter-section" onClick={toggleFilterMenu} onKeyUp={toggleFilterMenuByKeyPress}>
-            <legend className="filter__filter-name" tabIndex="0" aria-label="Раскрыть список фильтра" role="button">{section.name}</legend>
-            <div className="filter__options-container">
-              <ul className="filter__options-list">
+          <FilterSection key={section.name} onClick={toggleFilterMenu} onKeyUp={toggleFilterMenuByKeyPress}>
+            <FilterName tabIndex="0" aria-label="Раскрыть список фильтра" role="button">{section.name}</FilterName>
+            <OptionsContainer>
+              <ul>
                 {section.options.map((option) => (
-                  <li key={option} className="filter__option-item">
-                    <input type="checkbox" name={option} className="visually-hidden filter__option-input" id={option} />
-                    <label className="filter__option-label" htmlFor={option}>{option}</label>
-                  </li>
+                  <OptionItem key={option}>
+                    <Input className="visually-hidden" type="checkbox" name={option} id={option} />
+                    <InputLabel htmlFor={option}>{option}</InputLabel>
+                  </OptionItem>
                 ))}
               </ul>
-            </div>
-          </fieldset>
+            </OptionsContainer>
+          </FilterSection>
         ))}
-        <button className="filter__submit-filter" type="submit">Применить</button>
+        <SubmitButton type="submit">Применить</SubmitButton>
       </form>
-    </section>
+    </Section>
   );
 }

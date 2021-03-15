@@ -1,7 +1,11 @@
-.arrow-button {
+import styled from 'styled-components';
+
+import { MEDIA_SIZES, TRANSITION_DURATION } from '../../styles-data/variables';
+
+const Button = styled.button`
   width: 30px;
   height: 30px;
-  transition: opacity, $transition-duration;
+  transition: opacity, ${TRANSITION_DURATION};
 
   &:hover,
   &:focus {
@@ -15,7 +19,7 @@
   & svg {
     width: 100%;
     height: 100%;
-    transition: width, height, $transition-duration;
+    transition: width, height, ${TRANSITION_DURATION};
   }
 
   &[data-side="left"] svg {
@@ -29,11 +33,11 @@
       opacity: .3;
     }
   }
-}
 
-@include media-breakpoint-up(md) {
-  .arrow-button {
+  @media (min-width: ${MEDIA_SIZES.md}) {
     width: 50px;
     height: 50px;
   }
-}
+`;
+
+export default Button;

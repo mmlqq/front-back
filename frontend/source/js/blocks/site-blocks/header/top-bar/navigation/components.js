@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-import { NavLink } from 'react-router-dom';
-
 import { TRANSPARENT, MEDIA_SIZES } from '../../../../universal/styles-data/variables';
-
-import linkInteractiveStyle from '../../../../universal/styles-data/common-styles/link-interactive-style';
 
 export const Nav = styled.nav`
   position: absolute;
@@ -61,8 +57,4 @@ export const Item = styled.li`
       margin-left: 5px;
     }
   }
-`;
-
-export const LinkTo = styled(NavLink)`
-  ${linkInteractiveStyle}
 `;

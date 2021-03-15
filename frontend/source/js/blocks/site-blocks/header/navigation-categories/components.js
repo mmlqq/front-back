@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-import { NavLink } from 'react-router-dom';
-
-import linkInteractiveStyle from '../../../universal/styles-data/common-styles/link-interactive-style';
-
 import { DEFAULT_PADDING, BLACK_COLOR, MEDIA_SIZES } from '../../../universal/styles-data/variables';
 
 export const Nav = styled.nav`
@@ -29,8 +25,4 @@ export const Item = styled.li`
   @media (min-width: ${MEDIA_SIZES.md}) {
     margin: 0 20px;
   }
-`;
-
-export const LinkTo = styled(NavLink)`
-  ${linkInteractiveStyle}
 `;

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Nav, List, Item, LinkTo } from './components';
+import { Nav, List, Item } from './components';
+import LinkTo from '../../../../universal/buttons/link-to/components';
 
 import data from './data/data';
 

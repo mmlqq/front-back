@@ -1,9 +1,7 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import $ from 'jquery';
 
-import ArrowButton from '../../buttons/arrow-button/arrow-button';
+import { Section, Wrapper, LogoContainer, SliderButton as ArrowButton, List, SliderContainer, SliderText } from './components';
 
 import mock from './mock/mock';
 
@@ -54,25 +52,25 @@ export default function Slider() {
   //
 
   return (
-    <section className="slider">
+    <Section>
       <h2 className="visually-hidden">Блок со слайдером</h2>
-      <div className="slider__wrapper" onClick={changeSliderHandler}>
-        <figure className="slider__logo-container">
+      <Wrapper onClick={changeSliderHandler}>
+        <LogoContainer>
           <img src="assets/img/logo-placeholder.png" alt="Логотип магазина" />
-        </figure>
-        <ArrowButton majorClass="slider__shift-button" side="left" conditionForDisable={sliderCount === 1} />
-        <ul className="row row-cols-1 g-0 slider__list">
+        </LogoContainer>
+        <ArrowButton side="left" conditionForDisable={sliderCount === 1} />
+        <List className="row row-cols-1 g-0">
           {mock.map((item) => (
-            <li key={item.id} className="col slider__item">
-              <figure className="slider__slider-container">
+            <li key={item.id} className="col">
+              <SliderContainer>
                 <img src={item.srcImg} alt={item.alt} />
-                <figcaption className="slider__slider-text">{item.description}</figcaption>
-              </figure>
+                <SliderText>{item.description}</SliderText>
+              </SliderContainer>
             </li>
           ))}
-        </ul>
-        <ArrowButton majorClass="slider__shift-button" side="right" conditionForDisable={sliderCount === mock.length} />
-      </div>
-    </section>
+        </List>
+        <ArrowButton side="right" conditionForDisable={sliderCount === mock.length} />
+      </Wrapper>
+    </Section>
   );
 }

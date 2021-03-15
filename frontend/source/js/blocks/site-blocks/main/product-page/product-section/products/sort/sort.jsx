@@ -1,15 +1,17 @@
 import React from 'react';
 
+import { Form, Select, Option } from './components';
+
 import mock from './mock/mock';
 
 export default function Sort() {
   return (
-    <form method="GET" className="sort">
-      <select className="sort__select" name="sort-type" id="sort-type" title="Меню сортировки">
+    <Form method="GET" className="sort">
+      <Select name="sort-type" id="sort-type" title="Меню сортировки">
         {mock.map((option) => (
-          <option className="sort__option" key={option} value={option}>{option}</option>
+          <Option key={option} value={option}>{option}</Option>
         ))}
-      </select>
-    </form>
+      </Select>
+    </Form>
   );
 }

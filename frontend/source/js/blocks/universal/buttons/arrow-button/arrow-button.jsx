@@ -1,24 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
+import Button from './components';
 import Arrow from '../../../svg/arrow-icon/arrow-icon';
 
-export default function ArrowButton({ majorClass, side, conditionForDisable }) {
+export default function ArrowButton({ className, side, conditionForDisable }) {
   return (
-    <button className={classNames('arrow-button', majorClass && `${majorClass}`)} aria-label={side === 'left' ? 'Предыдущий слайд' : 'Следующий слайд'} data-side={side} type="button" disabled={conditionForDisable}>
+    <Button className={className} aria-label={side === 'left' ? 'Предыдущий слайд' : 'Следующий слайд'} data-side={side} type="button" disabled={conditionForDisable}>
       <Arrow />
-    </button>
+    </Button>
   );
 }
 
 ArrowButton.propTypes = {
+  className: PropTypes.string,
   side: PropTypes.string.isRequired,
-  majorClass: PropTypes.string,
   conditionForDisable: PropTypes.bool,
 };
 
 ArrowButton.defaultProps = {
-  majorClass: null,
+  className: null,
   conditionForDisable: null,
 };

@@ -6,6 +6,8 @@ import '../sass/style.scss';
 
 import ScrollToTop from './blocks/utils/scroll-to-top';
 
+import GlobalStyle from './blocks/global-style';
+
 import Header from './blocks/site-blocks/header/header';
 import Main from './blocks/site-blocks/main/main';
 import Footer from './blocks/site-blocks/footer/footer';
@@ -17,6 +19,7 @@ function Root() {
   return (
     <HashRouter>
       <ScrollToTop />
+      <GlobalStyle />
       <Switch>
         <Route path="/">
           <Header />

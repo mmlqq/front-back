@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Section from './components';
+
 import ContainerHeadline from '../../../../../universal/blocks/headline-container/headline-container';
 
 import ProductList from '../../../../../universal/blocks/product-list/product-list';
@@ -26,10 +28,10 @@ export default function Products({ location }) {
   //
 
   return (
-    <section className="col col-lg-9 products">
-      <ContainerHeadline majorClass="products" headlineText={getSectionName()} otherElem={<Sort />} />
+    <Section className="col col-lg-9">
+      <ContainerHeadline headlineText={getSectionName()} otherElem={<Sort />} />
       <ProductList majorClass="products__list" bootstrapClass="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-0" list={defineCategory().products} />
-    </section>
+    </Section>
   );
 }
 
