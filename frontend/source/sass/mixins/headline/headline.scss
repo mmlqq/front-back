@@ -1,9 +1,0 @@
-@mixin headlineUnderline {
-  margin-bottom: -2px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid $underline-headline-color;
-}
-
-@mixin headlineFontNormal {
-  font-weight: 400;
-}

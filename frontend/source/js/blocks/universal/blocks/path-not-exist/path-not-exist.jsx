@@ -1,12 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
+
+import { Section, WarningText, LinkTo } from './path-not-exist-style';
 
 export default function PathNotExist() {
+  const linkRef = useRef();
+
+  // Фокусировка пользователя на кнопке
+
+  useEffect(() => {
+    const timerID = setTimeout(() => beFocused(), 500);
+
+    return () => {
+      clearTimeout(timerID);
+    };
+  }, []);
+
+  //
+
+  // Установка принудительного фокуса
+
+  function beFocused() {
+    linkRef.current.focus();
+  }
+
+  //
+
   return (
-    <section className="path-not-exist">
+    <Section>
       <h2 className="visually-hidden">Пути не существует</h2>
-      <p className="path-not-exist__warning">Такого пути нет!</p>
-      <Link to="/#" className="path-not-exist__to-main-page" autofocus>На главную страницу</Link>
-    </section>
+      <WarningText>Такого пути нет!</WarningText>
+      <LinkTo ref={linkRef} to="/" onBlur={beFocused}>На главную страницу</LinkTo>
+    </Section>
   );
 }

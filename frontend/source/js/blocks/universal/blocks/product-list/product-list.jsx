@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import classNames from 'classnames';
+import { List, Item, ImageContainer, Price, LinkToProduct } from './product-list-style';
+
 import LoadingIcon from '../../../svg/loading-icon/loading-icon';
 
-export default function ProductList({ majorClass, bootstrapClass, list }) {
+export default function ProductList({ bootstrapClass, list }) {
   const [loading, setLoading] = useState(null);
   const [loadedData, setLoadedData] = useState(null);
 
@@ -28,28 +29,26 @@ export default function ProductList({ majorClass, bootstrapClass, list }) {
     loading || !loadedData
       ? <LoadingIcon />
       : (
-        <ul className={classNames('product-list', majorClass, bootstrapClass)}>
+        <List className={bootstrapClass}>
           {loadedData.map((item) => (
-            <li key={item.id} className="product-list__item">
-              <figure className="product-list__product-img-container">
+            <Item key={item.id}>
+              <ImageContainer>
                 <img src="assets/img/product-placeholder.png" alt="Товар" />
-                <figcaption className="product-list__product-price">{`${item.price} руб`}</figcaption>
-              </figure>
-              <a href="test" className="link product-list__product-link">{item.name}</a>
-            </li>
+                <Price>{`${item.price} руб`}</Price>
+              </ImageContainer>
+              <LinkToProduct href="test">{item.name}</LinkToProduct>
+            </Item>
           ))}
-        </ul>
+        </List>
       )
   );
 }
 
 ProductList.propTypes = {
-  majorClass: PropTypes.string,
   bootstrapClass: PropTypes.string,
   list: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 ProductList.defaultProps = {
-  majorClass: null,
   bootstrapClass: null,
 };

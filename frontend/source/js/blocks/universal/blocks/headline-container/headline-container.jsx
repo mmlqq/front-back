@@ -1,24 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classNames from 'classnames';
+import { Container, Headline } from './headline-container-style';
 
-export default function HeadlineContainer({ majorClass, headlineText, otherElem }) {
+export default function HeadlineContainer({ headlineText, otherElem }) {
   return (
-    <div className={classNames('headline-container', majorClass && `${majorClass}__headline-container`)}>
-      <h2 className={classNames('headline-container__headline', majorClass && `${majorClass}__headline`)}>{headlineText}</h2>
+    <Container otherElem={Boolean(otherElem)}>
+      <Headline otherElem={Boolean(otherElem)}>{headlineText}</Headline>
       {otherElem}
-    </div>
+    </Container>
   );
 }
 
 HeadlineContainer.propTypes = {
-  majorClass: PropTypes.string,
   headlineText: PropTypes.string.isRequired,
   otherElem: PropTypes.node,
 };
 
 HeadlineContainer.defaultProps = {
-  majorClass: null,
   otherElem: null,
 };
