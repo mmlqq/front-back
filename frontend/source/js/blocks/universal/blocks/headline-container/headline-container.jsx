@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container, Headline } from './components';
+import { Container, Headline } from './headline-container-style';
 
 export default function HeadlineContainer({ headlineText, otherElem }) {
   return (

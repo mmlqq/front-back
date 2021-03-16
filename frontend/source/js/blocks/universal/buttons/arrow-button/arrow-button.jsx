@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Button from './components';
+import Button from './arrow-button-style';
 import Arrow from '../../../svg/arrow-icon/arrow-icon';
 
 export default function ArrowButton({ className, side, conditionForDisable }) {

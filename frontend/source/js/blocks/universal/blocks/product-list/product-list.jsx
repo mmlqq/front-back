@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { List, Item, ImageContainer, Price, LinkToProduct } from './components';
+import { List, Item, ImageContainer, Price, LinkToProduct } from './product-list-style';
 
 import LoadingIcon from '../../../svg/loading-icon/loading-icon';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Button from './components';
+import Button from './hamburger-menu-style';
 
 import HamburgerIcon from '../../../svg/hamburger-icon/hamburger-icon';
 

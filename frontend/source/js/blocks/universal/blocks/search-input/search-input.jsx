@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Section, Form, Input } from './components';
+import { Section, Form, Input } from './search-input-style';
 
 import '../../../../../img/svg/loupe.svg';
 
