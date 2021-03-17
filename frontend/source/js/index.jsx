@@ -11,6 +11,7 @@ import GlobalStyles from './blocks/styles-data/global-styles';
 import Header from './blocks/main-blocks/header/header';
 import Main from './blocks/main-blocks/main/main';
 import Footer from './blocks/main-blocks/footer/footer';
+import ErrorBoundary from './blocks/utils/error-boundary/error-boundary';
 
 const root = document.getElementById('root');
 
@@ -19,9 +20,11 @@ function Root() {
     <HashRouter>
       <ScrollToTop />
       <GlobalStyles />
-      <Header />
-      <Main />
-      <Footer />
+      <ErrorBoundary>
+        <Header />
+        <Main />
+        <Footer />
+      </ErrorBoundary>
     </HashRouter>
   );
 }

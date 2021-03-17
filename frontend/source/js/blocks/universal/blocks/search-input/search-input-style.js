@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import '../../../../../img/svg/loupe.svg';
+
 import { DEFAULT_PADDING, BLACK_COLOR, WHITE_COLOR, MEDIA_SIZES, TRANSITION_DURATION } from '../../../styles-data/variables';
 
 export const Section = styled.section`

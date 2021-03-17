@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 import { Section, Form, Input } from './search-input-style';
 
-import '../../../../../img/svg/loupe.svg';
-
 export default function SearchInput() {
   const [searchText, setSearchText] = useState('');
 

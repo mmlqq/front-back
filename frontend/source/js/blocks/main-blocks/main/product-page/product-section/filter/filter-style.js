@@ -64,7 +64,7 @@ export const InputLabel = styled.label`
   padding-left: 25px;
   display: block;
   cursor: pointer;
-  transition: opacity ${TRANSITION_DURATION}
+  transition: opacity ${TRANSITION_DURATION};
 
   &::before {
     position: absolute;
