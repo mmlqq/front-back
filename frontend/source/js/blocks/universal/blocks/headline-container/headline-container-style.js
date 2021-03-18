@@ -17,6 +17,8 @@ export const Container = styled.div`
 `;
 
 export const Headline = styled.h2`
+  font-size: 1.3rem;
+  line-height: 1.7rem;
   ${headlineUnderline}
   ${headlineFontNormal}
   ${(props) => props.otherElem && css`

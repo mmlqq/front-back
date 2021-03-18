@@ -25,7 +25,7 @@ export const ButtonItem = styled.li`
 
 export const CollectionType = styled.button`
   font-size: 1.3rem;
-  line-height: 1.3rem;
+  line-height: 1.7rem;
   ${elemOpacity}
   ${(props) => props.active && headlineUnderline}
 `;

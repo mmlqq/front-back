@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import $ from 'jquery';
 
 import Section from '../section/section';
 import { Wrapper, LogoContainer, SliderButton as ArrowButton, List, SliderContainer, SliderText } from './slider-style';

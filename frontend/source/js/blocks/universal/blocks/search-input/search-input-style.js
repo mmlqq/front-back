@@ -31,8 +31,8 @@ export const Input = styled.input`
   background-size: 30px;
 
   &::placeholder {
-    color: $black-color;
-    transition: all, ${TRANSITION_DURATION};
+    color: ${BLACK_COLOR};
+    transition: transform, ${TRANSITION_DURATION};
   }
 
   &:hover::placeholder,

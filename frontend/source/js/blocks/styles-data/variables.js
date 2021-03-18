@@ -17,7 +17,6 @@ export const DEFAULT_LINE_HEIGHT = '24px';
 // Шрифты
 
 export const OSWALD_FONT = 'Oswald';
-export const PERFECT_DOS = 'PerfectDOSVGA437';
 
 //
 

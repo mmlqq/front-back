@@ -17,7 +17,7 @@ export const Section = styled.section`
 export const Info = styled.p`
   margin-bottom: 20px;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 2rem;
   text-align: center;
 
   @media (min-width: ${MEDIA_SIZES.lg}) {
