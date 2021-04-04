@@ -1,5 +1,5 @@
-/backend/.idea
-/backend/*.iml
+.idea
+backend/*.iml
 node_modules/
 npm-debug.*
 debug.log

@@ -6,16 +6,23 @@ public class Product {
     private String description;
     private int price;
     private Category category;
+    private Sex sex;
+    private String brand;
+    private String weight;
 
     public Product(){
 
     }
-    public Product(int id, String name, String description, int price, Category category) {
+    public Product(int id, String name, String description, int price, Category category, Sex sex, String weight, String brand) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.category = category;
+        this.sex = sex;
+        this.weight = weight;
+        this.brand = brand;
+
 
     }
 
@@ -40,6 +47,12 @@ public class Product {
         this.category = category;
     }
 
+    public void setSex(Sex sex){this.sex = sex;}
+
+    public void setBrand(String brand){this.brand = brand;}
+
+    public void setWeight(String weight){this.weight = weight;}
+
     public int getId() {
         return id;
     }
@@ -59,4 +72,11 @@ public class Product {
     public Category getCategory() {
         return category;
     }
+
+    public Sex getSex() {return sex;}
+
+    public String getBrand(){return brand;}
+
+    public String getWeight(){return weight;}
+
 }
