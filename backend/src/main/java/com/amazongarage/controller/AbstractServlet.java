@@ -31,11 +31,11 @@ public abstract class AbstractServlet extends HttpServlet {
         writer.close();
     }
 
-    protected void responseByCategory(HttpServletResponse resp, Category category) throws IOException {
-        PrintWriter writer = resp.getWriter();
-        writer.write(getByCategory(category));
-        writer.close();
-    }
+//    protected void responseByCategory(HttpServletResponse resp, Category category) throws IOException {
+//        PrintWriter writer = resp.getWriter();
+//        writer.write(getByCategory(category));
+//        writer.close();
+//    }
 
     protected boolean idChecker(String path) {
         Pattern pattern = Pattern.compile("/products/(\\d*)");

@@ -65,48 +65,48 @@ public class ProductRepository {
     }
 
 
-    public List<Product> getByCategory(Category category) {
-        Connection connection = null;
-        Statement statement = null;
-        String getByCat;
-        List<Product> productsByCategories = new ArrayList<>();
-        try {
-            connection = getConnection();
-            statement = connection.createStatement();
-            getByCat = format("SELECT * FROM products WHERE product_category = '%s';", category.toString());
-            ResultSet resultSet = statement.executeQuery(getByCat);
-            while (resultSet.next()) {
-                Product product = new Product();
-                product.setId(resultSet.getInt(1));
-                product.setName(resultSet.getString(2));
-                product.setDescription(resultSet.getString(3));
-                product.setPrice(resultSet.getInt(4));
-                product.setCategory(Category.valueOf(resultSet.getString(5)));
-                product.setSex(Sex.valueOf(resultSet.getString(6)));
-                product.setWeight(resultSet.getString(7));
-                product.setBrand(resultSet.getString(8));
-                productsByCategories.add(product);
-            }
-        } catch (SQLException sqlException) {
-            System.out.println("Couldn't get information about this products" + " " + sqlException.getMessage());
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException sqlException) {
-                    System.out.println("Couldn't close statement");
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException sqlException) {
-                    System.out.println("Couldn't close connection");
-                }
-            }
-        }
-        return productsByCategories;
-    }
+//    public List<Product> getByCategory(Category category) {
+//        Connection connection = null;
+//        Statement statement = null;
+//        String getByCat;
+//        List<Product> productsByCategories = new ArrayList<>();
+//        try {
+//            connection = getConnection();
+//            statement = connection.createStatement();
+//            getByCat = format("SELECT * FROM products WHERE product_category = '%s';", category.toString());
+//            ResultSet resultSet = statement.executeQuery(getByCat);
+//            while (resultSet.next()) {
+//                Product product = new Product();
+//                product.setId(resultSet.getInt(1));
+//                product.setName(resultSet.getString(2));
+//                product.setDescription(resultSet.getString(3));
+//                product.setPrice(resultSet.getInt(4));
+//                product.setCategory(Category.valueOf(resultSet.getString(5)));
+//                product.setSex(Sex.valueOf(resultSet.getString(6)));
+//                product.setWeight(resultSet.getString(7));
+//                product.setBrand(resultSet.getString(8));
+//                productsByCategories.add(product);
+//            }
+//        } catch (SQLException sqlException) {
+//            System.out.println("Couldn't get information about this products" + " " + sqlException.getMessage());
+//        } finally {
+//            if (statement != null) {
+//                try {
+//                    statement.close();
+//                } catch (SQLException sqlException) {
+//                    System.out.println("Couldn't close statement");
+//                }
+//            }
+//            if (connection != null) {
+//                try {
+//                    connection.close();
+//                } catch (SQLException sqlException) {
+//                    System.out.println("Couldn't close connection");
+//                }
+//            }
+//        }
+//        return productsByCategories;
+//    }
 
     public List<Product> getByKeyValue(Map<String, String[]> map) {
         List<Product> productsByKeyValue = new ArrayList<>();
@@ -201,47 +201,47 @@ public class ProductRepository {
         return product;
     }
 
-    public List getList() {
-        Connection connection = null;
-        Statement statement = null;
-        String getList;
-        try {
-            connection = getConnection();
-            statement = connection.createStatement();
-            getList = "SELECT * FROM products";
-            ResultSet resultSet = statement.executeQuery(getList);
-            while (resultSet.next()) {
-                Product product = new Product();
-                product.setId(resultSet.getInt(1));
-                product.setName(resultSet.getString(2));
-                product.setDescription(resultSet.getString(3));
-                product.setPrice(resultSet.getInt(4));
-                product.setCategory(Category.valueOf(resultSet.getString(5)));
-                product.setSex(Sex.valueOf(resultSet.getString(6)));
-                product.setWeight(resultSet.getString(7));
-                product.setBrand(resultSet.getString(8));
-                products.add(product);
-            }
-        } catch (SQLException sqlException) {
-            System.out.println("Couldn't get information about this products" + " " + sqlException.getMessage());
-        } finally {
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException sqlException) {
-                    System.out.println("Couldn't close statement");
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException sqlException) {
-                    System.out.println("Couldn't close connection");
-                }
-            }
-        }
-        return products;
-    }
+//    public List getList() {
+//        Connection connection = null;
+//        Statement statement = null;
+//        String getList;
+//        try {
+//            connection = getConnection();
+//            statement = connection.createStatement();
+//            getList = "SELECT * FROM products";
+//            ResultSet resultSet = statement.executeQuery(getList);
+//            while (resultSet.next()) {
+//                Product product = new Product();
+//                product.setId(resultSet.getInt(1));
+//                product.setName(resultSet.getString(2));
+//                product.setDescription(resultSet.getString(3));
+//                product.setPrice(resultSet.getInt(4));
+//                product.setCategory(Category.valueOf(resultSet.getString(5)));
+//                product.setSex(Sex.valueOf(resultSet.getString(6)));
+//                product.setWeight(resultSet.getString(7));
+//                product.setBrand(resultSet.getString(8));
+//                products.add(product);
+//            }
+//        } catch (SQLException sqlException) {
+//            System.out.println("Couldn't get information about this products" + " " + sqlException.getMessage());
+//        } finally {
+//            if (statement != null) {
+//                try {
+//                    statement.close();
+//                } catch (SQLException sqlException) {
+//                    System.out.println("Couldn't close statement");
+//                }
+//            }
+//            if (connection != null) {
+//                try {
+//                    connection.close();
+//                } catch (SQLException sqlException) {
+//                    System.out.println("Couldn't close connection");
+//                }
+//            }
+//        }
+//        return products;
+//    }
 
     private static Connection getConnection() throws SQLException {
         try {

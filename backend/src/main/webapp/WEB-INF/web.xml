@@ -6,11 +6,11 @@
          version="3.1">
     <servlet>
         <servlet-name>SearchServlet</servlet-name>
-        <servlet-class>com.amazongarage.controller.SearchServlet</servlet-class>
+        <servlet-class>com.amazongarage.controller.FilterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SearchServlet</servlet-name>
-        <url-pattern>/products/search</url-pattern>
+        <url-pattern>/products/filter</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>ProductServlet</servlet-name>

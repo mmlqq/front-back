@@ -26,18 +26,18 @@ public class ProductServlet extends AbstractServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if (req.getRequestURI().equals("/products")) {
-            if (req.getParameter("category") != null) {
-                responseByCategory(resp, Category.valueOf(req.getParameter("category")));
-            } else {
-                getProducts(resp);
-            }
-
-        } else if (idChecker(req.getRequestURI())) {
-            getById(req, resp);
-        } else if (req.getRequestURI().equals("/products/categories")) {
-            getCategories(req, resp);
-        }
+//        if (req.getRequestURI().equals("/products")) {
+//            if (req.getParameter("category") != null) {
+//                responseByCategory(resp, Category.valueOf(req.getParameter("category")));
+//            } else {
+//                getProducts(resp);
+//            }
+//
+//        } else if (idChecker(req.getRequestURI())) {
+//            getById(req, resp);
+//        } else if (req.getRequestURI().equals("/products/categories")) {
+//            getCategories(req, resp);
+//        }
     }
 }
 
