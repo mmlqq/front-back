@@ -10,9 +10,9 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class SearchServlet extends AbstractServlet {
+public class FilterServlet extends AbstractServlet {
 
-    public SearchServlet() throws SQLException {
+    public FilterServlet() throws SQLException {
         super();
     }
 
