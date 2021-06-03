@@ -3,3 +3,5 @@ backend/*.iml
 node_modules/
 npm-debug.*
 debug.log
+backend/target/
+

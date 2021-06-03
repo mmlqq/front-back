@@ -20,17 +20,6 @@
             <artifactId>postgresql</artifactId>
             <version>42.2.19</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
-            <version>${tomcat.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <version>${tomcat.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-jasper</artifactId>
@@ -60,18 +49,48 @@
                     <artifactId>maven-war-plugin</artifactId>
                     <version>3.3.1</version>
                 </plugin>
+<!--                <plugin>-->
+<!--                    <groupId>org.apache.tomcat.maven</groupId>-->
+<!--                    <artifactId>tomcat7-maven-plugin</artifactId>-->
+<!--                    <version>2.2</version>-->
+<!--                    <configuration>-->
+<!--                        <url>http:// localhost:8080/manager/text</url>-->
+<!--                        <server>TomcatServer</server>-->
+<!--                        *(From maven > settings.xml)*-->
+<!--                        <username>tomcat</username>-->
+<!--                        <password>1488</password>-->
+<!--                    </configuration>-->
+<!--                </plugin>-->
+                <!-- Maven Assembly Plugin -->
                 <plugin>
-                    <groupId>org.apache.tomcat.maven</groupId>
-                    <artifactId>tomcat7-maven-plugin</artifactId>
-                    <version>2.2</version>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.4.1</version>
                     <configuration>
-                        <url>http:// localhost:8080/manager/text</url>
-                        <server>TomcatServer</server>
-                        *(From maven > settings.xml)*
-                        <username>tomcat</username>
-                        <password>1488</password>
+                        <!-- get all project dependencies -->
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <!-- MainClass in mainfest make a executable jar -->
+                        <archive>
+                            <manifest>
+                                <mainClass>com.amazongarage.Main</mainClass>
+                            </manifest>
+                        </archive>
+
                     </configuration>
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <!-- bind to the packaging phase -->
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>

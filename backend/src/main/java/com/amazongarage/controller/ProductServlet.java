@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 public class ProductServlet extends AbstractServlet {
@@ -32,7 +33,6 @@ public class ProductServlet extends AbstractServlet {
             } else {
                 getProducts(resp);
             }
-
         } else if (idChecker(req.getRequestURI())) {
             getById(req, resp);
         } else if (req.getRequestURI().equals("/products/categories")) {

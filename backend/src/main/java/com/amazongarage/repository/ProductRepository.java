@@ -3,14 +3,11 @@ package com.amazongarage.repository;
 import com.amazongarage.model.Category;
 import com.amazongarage.model.Product;
 import com.amazongarage.model.Sex;
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
 
-import javax.jws.soap.SOAPBinding;
-import javax.lang.model.element.NestingKind;
-import javax.swing.plaf.nimbus.State;
-import java.net.ConnectException;
 import java.sql.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import static java.lang.String.format;
@@ -33,8 +30,6 @@ public class ProductRepository {
         statement.close();
         connection.close();
     }
-
-    private static final List<Product> products = new ArrayList<>();
 
     public void remove(int id) {
         Connection connection = null;
@@ -201,7 +196,8 @@ public class ProductRepository {
         return product;
     }
 
-    public List getList() {
+    public List<Product> getList() {
+        final List<Product> products = new ArrayList<>();
         Connection connection = null;
         Statement statement = null;
         String getList;
@@ -249,7 +245,7 @@ public class ProductRepository {
         } catch (ClassNotFoundException exception) {
             System.out.println("Couldn't find postgres driver class");
         }
-        return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "admin", "admin");
+        return DriverManager.getConnection("jdbc:postgresql://postgres:5432/postgres", "postgres", "admin");
     }
 
 }
